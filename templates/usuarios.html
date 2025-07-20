@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="/static/css/estilos.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+</head>
+<body>
+<div class="contenedor">
+
+    <h1>Inicio de Secion</h1>
+
+    <form action="/usuarios" method="POST">
+
+        <div class="columnas">
+        <label for="usuario">Ingrese su Nombre de Usuario</label>
+        <input type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario" required>
+        </div>
+
+        <div class="columnas">
+        <label for="contrasena">Ingrese su Contraceña</label>
+        <input type="text" name="contrasena" id="contrasena" placeholder="Contraceña" required>
+        </div>
+
+        <div>
+        <input type="submit" value="Ingresar" class="botones">
+        </div>
+        <div>
+            {% if mensaje %}
+            <p>{{ mensaje }}</p>
+            {% endif %}
+        </div>
+    </form>
+</div>
+</body>
+</html>
